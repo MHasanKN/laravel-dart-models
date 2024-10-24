@@ -9,12 +9,20 @@ This package allows you to generate Dart/Flutter models directly from Laravel mi
 - Provides JSON serialization methods for Dart models.
 
 ## Installation
-Add this package to your Laravel project via Composer:
+1. Add this package to your Laravel project via Composer:
 
 ```bash
 composer require mhasankn/dart-models
 ```
 
+2. In your Laravel project, open config/app.php or bootstrap/providers.php and add the following entry to the providers array:
+
+```
+'providers' => [
+    // Other service providers...
+    Mhasankn\DartModels\DartModelsServiceProvider::class,
+],
+```
 ## Usage
 1. Generate models from migrations:
 bash
